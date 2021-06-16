@@ -79,7 +79,7 @@
     </dropwizard-metrics-hadoop-metrics2-reporter.version>
     <dropwizard.version>3.1.0</dropwizard.version>
     <guava.version>19.0</guava.version>
-    <hadoop.version>3.1.0</hadoop.version>
+    <hadoop.version>3.3.1</hadoop.version>
     <hikaricp.version>2.6.1</hikaricp.version>
     <jackson.version>2.10.5</jackson.version>
     <javolution.version>5.5.1</javolution.version>
@@ -101,7 +101,7 @@
     <storage-api.version>2.7.0-SNAPSHOT</storage-api.version>
     <beanutils.version>1.9.4</beanutils.version>
     <hamcrest.version>1.3</hamcrest.version>
-    <curator.version>4.2.0</curator.version>
+    <curator.version>4.3.0</curator.version>
     <zookeeper.version>3.5.5</zookeeper.version>
     <cron-utils.version>8.1.1</cron-utils.version>
     <spotbugs.version>4.0.3</spotbugs.version>
