@@ -30,7 +30,7 @@
   <properties>
     <hive.path.to.root>..</hive.path.to.root>
     <powermock.version>2.0.2</powermock.version>
-    <reflections.version>0.9.10</reflections.version>
+    <reflections.version>0.9.12</reflections.version>
     <atlas.version>2.1.0</atlas.version>
   </properties>
 
@@ -897,8 +897,8 @@
                 <phase>generate-sources</phase>
                 <configuration>
                   <target>
-                    <property name="protobuf.src.dir"  location="${basedir}/src/protobuf/java"/>
-                    <property name="protobuf.build.dir"  location="${basedir}/src/gen/protobuf/gen-java"/>
+                    <property name="protobuf.src.dir" location="${basedir}/src/protobuf/java"/>
+                    <property name="protobuf.build.dir" location="${basedir}/src/gen/protobuf/gen-java"/>
                     <echo>Building ql Protobuf</echo>
                     <mkdir dir="${protobuf.build.dir}"/>
                     <exec executable="protoc" failonerror="true">
@@ -917,8 +917,8 @@
                 <phase>generate-test-sources</phase>
                 <configuration>
                   <target>
-                    <property name="protobuf.src.dir"  location="${basedir}/src/protobuf/test"/>
-                    <property name="protobuf.build.dir"  location="${basedir}/src/gen/protobuf/gen-test"/>
+                    <property name="protobuf.src.dir" location="${basedir}/src/protobuf/test"/>
+                    <property name="protobuf.build.dir" location="${basedir}/src/gen/protobuf/gen-test"/>
                     <echo>Building ql test Protobuf</echo>
                     <mkdir dir="${protobuf.build.dir}"/>
                     <exec executable="protoc" failonerror="true">
@@ -954,12 +954,11 @@
             <configuration>
               <target>
                 <property name="compile.classpath" refid="maven.compile.classpath"/>
-                <taskdef name="vectorcodegen" classname="org.apache.hadoop.hive.tools.GenVectorCode"
-                    classpath="${compile.classpath}"/>
+                <taskdef name="vectorcodegen" classname="org.apache.hadoop.hive.tools.GenVectorCode" classpath="${compile.classpath}"/>
                 <mkdir dir="${project.build.directory}/generated-sources/java/org/apache/hadoop/hive/ql/exec/vector/expressions/gen/"/>
                 <mkdir dir="${project.build.directory}/generated-sources/java/org/apache/hadoop/hive/ql/exec/vector/expressions/aggregates/gen/"/>
                 <mkdir dir="${project.build.directory}/generated-test-sources/java/org/apache/hadoop/hive/ql/exec/vector/expressions/gen/"/>
-                <vectorcodegen templateBaseDir="${basedir}/src/gen/vectorization/" buildDir="${project.build.directory}" />
+                <vectorcodegen templateBaseDir="${basedir}/src/gen/vectorization/" buildDir="${project.build.directory}"/>
               </target>
             </configuration>
             <goals>
@@ -974,7 +973,7 @@
             </goals>
             <configuration>
               <target>
-                <mkdir dir="${test.tmp.dir}/scripts/metastore" />
+                <mkdir dir="${test.tmp.dir}/scripts/metastore"/>
                 <copy todir="${test.tmp.dir}/scripts/metastore">
                   <fileset dir="${basedir}/${hive.path.to.root}/metastore/scripts/"/>
                 </copy>
