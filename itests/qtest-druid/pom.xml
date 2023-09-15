@@ -40,7 +40,7 @@
     <druid.avatica.version>1.15.0</druid.avatica.version>
     <druid.curator.version>4.0.0</druid.curator.version>
     <druid.jersey.version>1.19.3</druid.jersey.version>
-    <druid.jetty.version>9.4.10.v20180503</druid.jetty.version>
+    <druid.jetty.version>9.4.52.v20230823</druid.jetty.version>
     <druid.derby.version>10.11.1.1</druid.derby.version>
     <druid.guava.version>16.0.1</druid.guava.version>
     <druid.guice.version>4.1.0</druid.guice.version>
@@ -328,7 +328,7 @@
             </goals>
             <configuration>
               <target>
-                <mkdir dir="${test.tmp.dir}/scripts/metastore" />
+                <mkdir dir="${test.tmp.dir}/scripts/metastore"/>
                 <copy todir="${test.tmp.dir}/scripts/metastore">
                   <fileset dir="${basedir}/${hive.path.to.root}/metastore/scripts/"/>
                 </copy>
