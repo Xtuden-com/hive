@@ -33,7 +33,7 @@
     <dependency>
       <groupId>org.apache.hive</groupId>
       <artifactId>hive-standalone-metastore-common</artifactId>
-      <version>4.0.0-SNAPSHOT</version>
+      <version>4.0.0</version>
     </dependency>
 
     <dependency>
@@ -477,11 +477,11 @@
             <configuration>
               <target>
                 <delete dir="${test.tmp.dir}"/>
-                <delete dir="${test.warehouse.external.dir}" />
+                <delete dir="${test.warehouse.external.dir}"/>
                 <delete dir="${test.warehouse.dir}"/>
                 <mkdir dir="${test.tmp.dir}"/>
                 <mkdir dir="${test.warehouse.dir}"/>
-                <mkdir dir="${test.warehouse.external.dir}" />
+                <mkdir dir="${test.warehouse.external.dir}"/>
               </target>
             </configuration>
           </execution>
